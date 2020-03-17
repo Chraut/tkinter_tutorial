@@ -10,7 +10,6 @@ root = Tk()
 root.title("Image viewer")
 root.iconbitmap('suez_logo.ico')
 
-
 # add image
 my_img1 = ImageTk.PhotoImage(Image.open("images/cat01.jpg"))
 my_img2 = ImageTk.PhotoImage(Image.open("images/cat02.jpg"))
@@ -31,7 +30,7 @@ def forward(image_number):
     my_label.grid_forget()
     my_label = Label(image=image_list[image_number-1])
     button_forward = Button(root, text=">>", command=lambda: forward(image_number+1))
-    button_back = Button(root, text="<<", command= lambda: back(image_number-1))
+    button_back = Button(root, text="<<", command=lambda: back(image_number-1))
     
     if image_number == 5:
         button_forward = Button(root, text=">>", state=DISABLED)

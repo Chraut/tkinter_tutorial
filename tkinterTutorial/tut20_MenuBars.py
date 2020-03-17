@@ -18,7 +18,7 @@ def our_command():
     my_label.pack()
 
 # Create a menu item
-file_menu = Menu(my_menu)
+file_menu = Menu(my_menu, tearoff=0)
 my_menu.add_cascade(label="File", menu=file_menu)
 file_menu.add_command(label="New...", command=our_command)
 file_menu.add_separator()
