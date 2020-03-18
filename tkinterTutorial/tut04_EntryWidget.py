@@ -24,5 +24,6 @@ def myClick():
 myButton = Button(root, text="Enter your name", command = myClick)
 myButton.pack()
 
+print(help(Button))
 
 root.mainloop()
